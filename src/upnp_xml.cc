@@ -818,8 +818,8 @@ void UpnpXMLBuilder::addResources(const std::shared_ptr<CdsItem>& item, pugi::xm
             if (!isExtThumbnail && transcoded) {
                 extend.append(D_OP).append("=").append(D_OP_SEEK_ENABLED).append(";").append(D_CONVERSION_INDICATOR).append("=" D_NO_CONVERSION);
 
-                if (startswith(mimeType, "audio") || startswith(mimeType, "video"))
-                    extend.append(";" D_FLAGS "=" D_TR_FLAGS_AV);
+                //if (startswith(mimeType, "audio") || startswith(mimeType, "video"))
+                //    extend.append(";" D_FLAGS "=" D_TR_FLAGS_AV);
             } else {
                 if (config->getBoolOption(CFG_SERVER_EXTEND_PROTOCOLINFO_DLNA_SEEK))
                     extend.append(D_OP).append("=").append(D_OP_SEEK_ENABLED).append(";");
